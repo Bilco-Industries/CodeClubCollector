@@ -2,9 +2,9 @@ from datetime import datetime
 # This file contains fuinctions that are useful for debugging
 # The different functions are disabled based on the variables set below
 
-INFO = True
+INFO = False
 WARN = True
-DEBUG = True
+DEBUG = False
 ERROR = True
 
 # This lets us print things to the console in different colours which makes it easier to spot error logs
