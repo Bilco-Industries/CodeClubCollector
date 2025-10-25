@@ -20,11 +20,6 @@ def index():
         pass
     logger.debug(records)
     return render_template('index.html', records=records)
-    
-
-@app.route("/docs", methods=["get"])
-def docs():
-    return render_template('docs.html')
 
 # configure an endpoint to accept data from other devices
 @app.route("/<name>", methods=["post"])
@@ -47,7 +42,7 @@ def recieve_data(name):
         logger.error(e)
         raise e
 
-
-
-if __name__ == "__main__":
-    app.run()
+def serve():
+    from waitress import serve
+    logger.info('SERVING')
+    serve(app, host="0.0.0.0", port=5000)
