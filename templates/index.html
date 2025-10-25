@@ -1,0 +1,32 @@
+<html>
+  <!-- Set configuration for the page and load the files we need in here -->
+  <head>
+    <!-- Page title shown in the tab bar -->
+    <title>Code Club Data Collector</title>
+
+    <!-- icon shown in the tab bar  -->
+    <link rel="icon" type="image/x-icon" href="/static/favicon.png" />
+
+    <!-- Include the styling for the page -->
+    <link rel="stylesheet" href="/static/index.css" />
+
+    <!-- include the javascript that runs the page -->
+    <script src="/static/index.js" charset="utf-8"></script>
+  </head>
+  <!-- Page content goes here -->
+  <body>
+    <div id="title">
+      <p>Welcome to the code club data Collector.</p>
+      <p>You can read the API documentation <a href="/docs">here</a>
+      or view the source code <a>here</a></p>
+    </div>
+    <div id="content">
+
+    </div>
+    {% if footer: %}
+    <div id="footer">
+        <p>Dark mode is the best mode</p>
+    </div>
+    {%endif%}
+  </body>
+</html>

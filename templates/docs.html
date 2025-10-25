@@ -1,0 +1,24 @@
+<html>
+  <head>
+    <title>Documentation</title>
+    <link rel="stylesheet" href="/static/index.css" />
+    <script src="/static/index.js" charset="utf-8"></script>
+    <script src="/static/docs.js" charset="utf-8"></script>
+  </head>
+  <body>
+    <div id="title">
+      <h1>API reference</h1>
+    </div>
+    <div id="content">
+        <p class="code replaceUrl" replaceUrl>
+            POST {url}/{name}
+        </p>
+        <p>Add some data to your page</p>
+    </div>
+    {% if footer: %}
+    <div id="footer">
+        <p>Dark mode is the best mode</p>
+    </div>
+    {%endif%}
+  </body>
+</html>
