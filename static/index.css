@@ -1,10 +1,8 @@
 /* Apply styling to the <body> element */
 body {
-    background-color: black;
+    background-color: #090619; /* This a hex code for the background colour of the page */
     color: white;
     font-family: 'Courier New', Courier, monospace;
-    display: flex;
-    flex-direction: column;
 }
 
 /* apply styling to elements with id="title" */
@@ -12,30 +10,33 @@ body {
     width: 100%;
     justify-content: center;
     text-align: center;
+}
+
+#data-table {
+    text-align: left;
+    margin: auto;
+    width: 50vw;
+}
+
+#data-table tbody {
+    overflow-y: auto;
+}
+
+#data-table td {
+    padding: 5px;
+}
+
+#data-table thead {
     height: 5vh;
 }
+
+#data-table tr:nth-child(even) { background-color: black; }
 
 a {
     color: green;
 }
 
-#content {
-    min-height: 90vh;
-}
-
-/* Apply styling to the first element inside of all elements with id="content" */
-#content > :first-child {
-    padding-top: 5vh;
-}
-
-/* Applyu styling to all elements with class="code" */
+/* Apply styling to all elements with class="code" */
 .code {
     color: green;
-}
-
-#footer {
-    position: bottom;
-    justify-content: center;
-    text-align: center;
-    height: 5vh;
 }

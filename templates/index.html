@@ -9,24 +9,42 @@
 
     <!-- Include the styling for the page -->
     <link rel="stylesheet" href="/static/index.css" />
-
-    <!-- include the javascript that runs the page -->
-    <script src="/static/index.js" charset="utf-8"></script>
   </head>
   <!-- Page content goes here -->
   <body>
     <div id="title">
-      <p>Welcome to the code club data Collector.</p>
-      <p>You can read the API documentation <a href="/docs">here</a>
-      or view the source code <a>here</a></p>
+      <h1>Welcome to the code club data Collector.</h1>
+      <p>You can view the source code <a href="https://github.com/Bilco-Industries/CodeClubCollector">here</a></p>
+      <p>Type your name here to see your data <input id="search-text" type="text"><button id="search-button">GO!</button></p>
     </div>
     <div id="content">
-
+      {% if records %}
+        <!-- If we have loaded data, put it into a table here -->
+        <table id="data-table">
+          <thead>
+            <th>Timestamp</th>
+            <th>Lux</th>
+            <th>Pressure</th>
+            <th>Temperature</th>
+            <th>Humidity</th>
+          </thead>
+          <tbody>
+            {% for record in records %}
+              <tr>
+                <td>{{ record[0] }}</td>
+                <td>{{ record[1] }}</td>
+                <td>{{ record[2] }}</td>
+                <td>{{ record[3] }}</td>
+                <td>{{ record[4] }}</td>
+              </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      {% else %}
+      <p>No data found, enter your name above to see your data</p>
+      {% endif %}
     </div>
-    {% if footer: %}
-    <div id="footer">
-        <p>Dark mode is the best mode</p>
-    </div>
-    {%endif%}
   </body>
+  <!-- include the javascript that runs the page -->
+  <script src="/static/index.js" charset="utf-8"></script>
 </html>
