@@ -33,7 +33,8 @@ Traditionally python used snake_case for it's variable and function names.
 
 You may notice some places where things like SHOUTING_SNAKE_CASE has been used. This means that a variable is "constant" and should not be changed while the program is running, python doesn't prevent you from changing these variables so naming them in this way makes it clear to other programmers (and yourself) that you should not change that variable in your code.
 
-You may also see some functions and variables prefixed with _. This means that a function or variable is "private", that means that it should not be used outside of the file it definied in. You can see examples of this in [database.py](database\sqlite.py) the _connect function should not be called outside of that file, whereas get_data_for_user is intended to be called by other functions.  
+You may also see some functions and variables prefixed with _. This means that a function or variable is "private", that means that it should not be used outside of the file it definied in. You can see examples of this in [database.py](database/sqlite.py) the _connect function should not be called outside of that file, whereas get_data_for_user is intended to be called by other functions.  
 
 ### JavaScript
+
 JavaScript uses a different naming convention called camelCase where each word after the first one in a variable or function name starts with a capital letter
