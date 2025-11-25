@@ -19,7 +19,7 @@ def index():
     except:
         pass
     logger.debug(records)
-    return render_template('index.html', records=records)
+    return render_template('index.html', records=records), 200
 
 # configure an endpoint to accept data from other devices
 @app.route("/<name>", methods=["post"])
@@ -40,7 +40,7 @@ def recieve_data(name):
 
     except Exception as e:
         logger.error(e)
-        raise e
+        return "Bad request", 400
 
 def serve():
     from waitress import serve
