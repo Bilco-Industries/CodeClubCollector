@@ -5,6 +5,8 @@ body {
     font-family: 'Courier New', Courier, monospace;
 }
 
+#content {text-align: center;}
+
 /* apply styling to elements with id="title" */
 #title {
     width: 100%;
@@ -30,7 +32,9 @@ body {
     height: 5vh;
 }
 
-#data-table tr:nth-child(even) { background-color: black; }
+#data-table tr:nth-child(even) { 
+    background-color: white;
+}
 
 a {
     color: green;

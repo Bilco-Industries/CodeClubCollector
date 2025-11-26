@@ -18,8 +18,8 @@ class DB:
             logger.error(f"Failed to connect to SQlite: {e}")
             
     def _execute(self, command, parameters = None): 
-        cursor: sqlite3.Cursor = None
-        connection: sqlite3.Connection = None
+        cursor: sqlite3.Cursor | None = None
+        connection: sqlite3.Connection | None  = None
         data = None
 
         try: 
@@ -50,7 +50,7 @@ class DB:
             if connection != None:
                 connection.close()
 
-            return data
+        return data
             
     # This function will create the table in the database if it does not already exist
     def _try_create_tables(self):

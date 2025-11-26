@@ -5,7 +5,7 @@ from database import database
 from logger import logger
 
 app = Flask(__name__)
-db: database.DB = database.DB()
+db = database.DB()
 
 # based on code shown here:
 # https://www.geeksforgeeks.org/python/how-to-serve-static-files-in-flask/
